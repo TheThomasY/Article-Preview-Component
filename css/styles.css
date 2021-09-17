@@ -1,0 +1,117 @@
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ecf2f8;
+}
+
+.card {
+  width: 88%;
+  margin: 7rem auto;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card-content {
+  padding: 0 3.2rem 2rem 3.2rem;
+}
+
+.card-article-title {
+  margin: 4rem 0 0 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: #48556a;
+}
+
+.card-article-description {
+  margin: 2.4rem 0 0 0;
+  line-height: 2rem;
+  color: #6d7f97;
+}
+
+.author-footer {
+  margin-top: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-pic {
+  display: block;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.author-date {
+  width: 100%;
+  margin-left: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.name {
+  font-weight: 700;
+  color: #48556a;
+}
+
+.date {
+  color: #9eafc2;
+}
+
+.share-button {
+  margin-left: auto;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+  cursor: pointer;
+}
+
+.share-button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */
