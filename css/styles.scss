@@ -32,6 +32,9 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .card-img {
@@ -64,6 +67,35 @@ body {
   margin-top: 3.5rem;
   display: flex;
   align-items: center;
+}
+
+@media (min-width: 55em) {
+  .card {
+    margin: 20rem auto;
+    flex-direction: row;
+    max-width: 75rem;
+  }
+
+  .card-img {
+    max-width: 28rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .card-content {
+    padding: 4rem 6rem 3rem 4rem;
+  }
+
+  .card-article-title {
+    margin: 0;
+    font-size: 2.1rem;
+  }
+
+  .author-footer {
+    margin-top: 2.5rem;
+  }
 }
 
 .profile-pic {
