@@ -70,35 +70,6 @@ body {
   align-items: center;
 }
 
-@media (min-width: 55em) {
-  .card {
-    margin: 20rem auto;
-    flex-direction: row;
-    max-width: 75rem;
-  }
-
-  .card-img {
-    max-width: 28rem;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 1rem;
-    object-fit: cover;
-    object-position: left;
-  }
-
-  .card-content {
-    padding: 4rem 6rem 3rem 4rem;
-  }
-
-  .card-article-title {
-    margin: 0;
-    font-size: 2.1rem;
-  }
-
-  .author-footer {
-    margin-top: 2.5rem;
-  }
-}
-
 .profile-pic {
   display: block;
   width: 4rem;
@@ -138,16 +109,16 @@ body {
 .share-panel-mobile {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 8rem;
   left: 0;
   bottom: 0;
-  height: 8rem;
   background-color: $dk-gr-blue;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: opacity 0.25s, height 0.25s ease-in;
 
   div {
     margin-left: 3rem;
@@ -162,12 +133,60 @@ body {
   }
 
   .panel-share-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 3rem;
+    border-radius: 50%;
+    background-color: $dk-blue;
+    position: relative;
     img {
-      width: 1.5rem;
-      margin-right: 3rem;
+      position: relative;
+      top: 25%;
+      left: 30%;
+      width: 1.3rem;
       filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
         hue-rotate(289deg) brightness(109%) contrast(101%);
     }
+  }
+}
+
+.share-panel-mobile:not(.show) {
+  height: 0px;
+  opacity: 0;
+  transition: opacity 0.25s, height 0.25s ease-out;
+}
+
+// Desktop site
+@media (min-width: 55em) {
+  .card {
+    margin: 20rem auto;
+    flex-direction: row;
+    max-width: 75rem;
+  }
+
+  .card-img {
+    max-width: 28rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .card-content {
+    padding: 4rem 6rem 3rem 4rem;
+  }
+
+  .card-article-title {
+    margin: 0;
+    font-size: 2.1rem;
+  }
+
+  .author-footer {
+    margin-top: 2.5rem;
+  }
+
+  .share-panel-mobile {
+    display: none;
   }
 }
 
