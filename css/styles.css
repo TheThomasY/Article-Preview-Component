@@ -74,36 +74,6 @@ body {
           align-items: center;
 }
 
-@media (min-width: 55em) {
-  .card {
-    margin: 20rem auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    max-width: 75rem;
-  }
-  .card-img {
-    max-width: 28rem;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 1rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: left;
-       object-position: left;
-  }
-  .card-content {
-    padding: 4rem 6rem 3rem 4rem;
-  }
-  .card-article-title {
-    margin: 0;
-    font-size: 2.1rem;
-  }
-  .author-footer {
-    margin-top: 2.5rem;
-  }
-}
-
 .profile-pic {
   display: block;
   width: 4rem;
@@ -149,10 +119,9 @@ body {
 .share-panel-mobile {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 8rem;
   left: 0;
   bottom: 0;
-  height: 8rem;
   background-color: #48556a;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -165,6 +134,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: opacity 0.25s, height 0.25s ease-in;
+  transition: opacity 0.25s, height 0.25s ease-in;
 }
 
 .share-panel-mobile div {
@@ -179,11 +150,62 @@ body {
   width: 2rem;
 }
 
-.share-panel-mobile .panel-share-icon img {
-  width: 1.5rem;
+.share-panel-mobile .panel-share-icon {
+  width: 3rem;
+  height: 3rem;
   margin-right: 3rem;
+  border-radius: 50%;
+  background-color: #6d7f97;
+  position: relative;
+}
+
+.share-panel-mobile .panel-share-icon img {
+  position: relative;
+  top: 25%;
+  left: 30%;
+  width: 1.3rem;
   -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(289deg) brightness(109%) contrast(101%);
           filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(289deg) brightness(109%) contrast(101%);
+}
+
+.share-panel-mobile:not(.show) {
+  height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s, height 0.25s ease-out;
+  transition: opacity 0.25s, height 0.25s ease-out;
+}
+
+@media (min-width: 55em) {
+  .card {
+    margin: 20rem auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 75rem;
+  }
+  .card-img {
+    max-width: 28rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+  }
+  .card-content {
+    padding: 4rem 6rem 3rem 4rem;
+  }
+  .card-article-title {
+    margin: 0;
+    font-size: 2.1rem;
+  }
+  .author-footer {
+    margin-top: 2.5rem;
+  }
+  .share-panel-mobile {
+    display: none;
+  }
 }
 
 .attribution {
