@@ -118,6 +118,7 @@ body {
   height: 8rem;
   left: 0;
   bottom: 0;
+  z-index: 1;
   background-color: $dk-gr-blue;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -249,6 +250,15 @@ body {
     margin-left: -5px;
     border: 10px solid $dk-gr-blue;
     border-color: $dk-gr-blue transparent transparent transparent;
+  }
+
+  .share-selected {
+    background-color: $dk-gr-blue;
+  }
+
+  .share-icon-filter {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+      hue-rotate(289deg) brightness(109%) contrast(101%);
   }
 }
 

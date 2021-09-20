@@ -10,8 +10,21 @@ document
           .classList.contains('show')
       ) {
         document.getElementById('share-panel-desktop').classList.remove('show');
-      } else
+        document
+          .getElementById('show-share-panel')
+          .classList.remove('share-selected');
+        document
+          .getElementById('card-share-icon')
+          .classList.remove('share-icon-filter');
+      } else {
         document.getElementById('share-panel-desktop').classList.add('show');
+        document
+          .getElementById('show-share-panel')
+          .classList.add('share-selected');
+        document
+          .getElementById('card-share-icon')
+          .classList.add('share-icon-filter');
+      }
     }
   });
 
