@@ -3,7 +3,16 @@ document
   .addEventListener('click', function () {
     if (mediaWidth.matches) {
       document.getElementById('share-panel-mobile').classList.add('show');
-    } else console.log('ELSE:', mediaWidth);
+    } else {
+      if (
+        document
+          .getElementById('share-panel-desktop')
+          .classList.contains('show')
+      ) {
+        document.getElementById('share-panel-desktop').classList.remove('show');
+      } else
+        document.getElementById('share-panel-desktop').classList.add('show');
+    }
   });
 
 document

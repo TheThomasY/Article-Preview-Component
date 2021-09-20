@@ -106,6 +106,7 @@ body {
 .share-button {
   margin-left: auto;
   padding: 0.8rem;
+  position: relative;
   border-radius: 50%;
   background-color: #ecf2f8;
   cursor: pointer;
@@ -114,6 +115,10 @@ body {
 .share-button img {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.share-panel-desktop {
+  display: none;
 }
 
 .share-panel-mobile {
@@ -148,6 +153,7 @@ body {
 
 .share-panel-mobile img {
   width: 2rem;
+  cursor: pointer;
 }
 
 .share-panel-mobile .panel-share-icon {
@@ -156,6 +162,7 @@ body {
   margin-right: 3rem;
   border-radius: 50%;
   background-color: #6d7f97;
+  cursor: pointer;
   position: relative;
 }
 
@@ -205,6 +212,64 @@ body {
   }
   .share-panel-mobile {
     display: none;
+  }
+  .share-panel-desktop {
+    display: none;
+    cursor: default;
+    position: absolute;
+    width: 25rem;
+    bottom: 6rem;
+    right: 50%;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    background-color: #48556a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 7rem;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s, height 0.5s, padding 0.75s;
+    transition: opacity 0.5s, height 0.5s, padding 0.75s;
+  }
+  .share-panel-desktop div {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    color: #9eafc2;
+  }
+  .share-panel-desktop img {
+    margin-right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+  .share-panel-desktop:not(.show) {
+    height: 0px;
+    opacity: 0;
+    padding: 0;
+    -webkit-transition: opacity 0.5s, height 0.5s ease-out, padding 0.25s ease-out;
+    transition: opacity 0.5s, height 0.5s ease-out, padding 0.25s ease-out;
+  }
+  .share-panel-desktop:after {
+    content: '';
+    position: absolute;
+    left: 48%;
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    margin-left: -5px;
+    border: 10px solid #48556a;
+    border-color: #48556a transparent transparent transparent;
   }
 }
 
