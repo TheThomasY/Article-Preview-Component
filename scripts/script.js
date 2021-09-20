@@ -3,7 +3,7 @@ document
   .addEventListener('click', function () {
     if (mediaWidth.matches) {
       document.getElementById('share-panel-mobile').classList.add('show');
-    } else console.log('ELSE:', mediaWidth);
+    } else document.getElementById('show-share-panel').classList.add('popup-show');
   });
 
 document

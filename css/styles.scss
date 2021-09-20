@@ -94,8 +94,10 @@ body {
 }
 
 .share-button {
+  border: 1px solid red;
   margin-left: auto;
   padding: 0.8rem;
+  position: relative;
   border-radius: 50%;
   background-color: $l-blue;
   cursor: pointer;
@@ -104,6 +106,19 @@ body {
     width: 1.5rem;
     height: 1.5rem;
   }
+}
+
+.share-panel-desktop {
+  position: absolute;
+  // bottom: 6rem;
+  bottom: 100%;
+  right: 0;
+  // width: 20rem;
+  background-color: $dk-gr-blue;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .share-panel-mobile {
