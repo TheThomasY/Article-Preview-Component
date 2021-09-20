@@ -15,7 +15,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 
-- Live Site URL: [GitHubPage](https://thethomasy.github.io/Social-Proof-Section/)
+- Live Site URL: [GitHubPage](https://thethomasy.github.io/Article-Preview-Component/)
 
 ### Screenshots
 
