@@ -94,7 +94,6 @@ body {
 }
 
 .share-button {
-  border: 1px solid red;
   margin-left: auto;
   padding: 0.8rem;
   position: relative;
@@ -109,18 +108,10 @@ body {
 }
 
 .share-panel-desktop {
-  position: absolute;
-  // bottom: 6rem;
-  bottom: 100%;
-  right: 0;
-  // width: 20rem;
-  background-color: $dk-gr-blue;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
 }
 
+// Share panel for mobile
 .share-panel-mobile {
   position: absolute;
   width: 100%;
@@ -145,6 +136,7 @@ body {
 
   img {
     width: 2rem;
+    cursor: pointer;
   }
 
   .panel-share-icon {
@@ -153,6 +145,7 @@ body {
     margin-right: 3rem;
     border-radius: 50%;
     background-color: $dk-blue;
+    cursor: pointer;
     position: relative;
     img {
       position: relative;
@@ -202,6 +195,60 @@ body {
 
   .share-panel-mobile {
     display: none;
+  }
+
+  // Share pop up for desktop
+  .share-panel-desktop {
+    display: none;
+    cursor: default;
+    position: absolute;
+    width: 25rem;
+    bottom: 6rem;
+    right: 50%;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    transform: translateX(50%);
+    background-color: $dk-gr-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    opacity: 1;
+    transition: opacity 0.5s, height 0.5s, padding 0.75s;
+
+    div {
+      margin-left: 1.5rem;
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.4rem;
+      color: $gr-blue;
+    }
+
+    img {
+      margin-right: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .share-panel-desktop:not(.show) {
+    height: 0px;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.5s, height 0.5s ease-out, padding 0.25s ease-out;
+  }
+
+  .share-panel-desktop:after {
+    content: '';
+    position: absolute;
+    left: 48%;
+    bottom: 0;
+    transform: translateY(100%);
+    margin-left: -5px;
+    border: 10px solid $dk-gr-blue;
+    border-color: $dk-gr-blue transparent transparent transparent;
   }
 }
 
