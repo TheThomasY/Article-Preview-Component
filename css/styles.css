@@ -274,10 +274,14 @@ body {
   }
   .share-selected {
     background-color: #48556a;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   .share-icon-filter {
     -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(289deg) brightness(109%) contrast(101%);
             filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(289deg) brightness(109%) contrast(101%);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 }
 
