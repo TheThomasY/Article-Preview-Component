@@ -34,6 +34,7 @@ I built this component mobile first and then focused on the desktop layout. The 
 - SASS
 - Flexbox
 - Mobile-first workflow
+- JS
 
 ## Author
 
